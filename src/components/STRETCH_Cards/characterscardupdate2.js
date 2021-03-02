@@ -22,7 +22,7 @@ function CharactersCard() {
 <div>       
 
 {characters.map(character => (
-        <h1>{character.name}</h1>
+        <h1>{character.aliases}</h1>
       ))}
       ;
       </div>
