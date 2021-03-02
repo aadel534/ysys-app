@@ -1,7 +1,7 @@
 /* TODO add some general header styles */
 
 .header {
-    margin: 10px;
+    margin-left: 160px;
     padding: 10px;
-    border: 1px solid red;
+    border-bottom: solid 1px black;
 }

@@ -22,6 +22,7 @@ export const SidebarComponent = (props) => {
              You could even change what you can see in the search bar based on what you are searching for.
              E.g add a dropdown to determine which field you're searching on ("name"/"title"/"alias")
         */}
-        I'm the sidebar component
+            <a href="#">About</a>
+            <a href="#">About 2</a>
     </div>
 };

@@ -1,9 +1,9 @@
 /* TODO add feed styles */
 .feed {
-    margin: 10px;
+    margin-left: 160px;
     padding: 10px;
-    border: 1px solid green;
 }
+
 p {
     display: inline;
     font-size: 20px;
