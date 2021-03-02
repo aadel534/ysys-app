@@ -1,10 +1,20 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { HeaderComponent } from './components/Header/HeaderComponent';
 import { SidebarComponent } from './components/Sidebar/SidebarComponent';
 import { FeedComponent } from './components/Feed/FeedComponent';
+import {getData} from './api/api';
 
 function App() {
+
+    const [expanded, setExpanded] = useState(true);
+    const [feedResults, setFeedResults] = useState([]);
+
+    useEffect( () => {
+        getData("houses")
+        .then(data => setFeedResults(data));
+    } ,[]);
+    
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
     //  This should include things like:
@@ -36,8 +46,8 @@ function App() {
     return (
         <div className="app">
             <HeaderComponent />
-            <SidebarComponent />
-            <FeedComponent />
+            <SidebarComponent expanded = {expanded}/>
+            <FeedComponent results={feedResults}/>
         </div>
     );
 }

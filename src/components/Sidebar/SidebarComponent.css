@@ -6,11 +6,11 @@
 }
 
 /* TODO expanded styles */
-.app-sidebar.expanded {
+.sidebar.expanded {
     /* width: ??? */
 }
 
 /* TODO collapsed styles */
-.app-sidebar.collapsed {
-    /* width: ??? */
+.sidebar.collapsed {
+    display: none;
 }

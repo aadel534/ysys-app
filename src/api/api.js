@@ -9,5 +9,9 @@
 //  customise function (or create another function) to retrieve extra data based on configuration (number of results/pages/search
 
 // see cheat sheet for fetch example.
-export const getData = () => {
+export const getData = async (searchMode) => {
+    const apiCall = `https://anapioficeandfire.com/api/${searchMode}/`;
+    const response = await fetch(apiCall);
+    const data = await response.json();
+    return data;
 };
