@@ -5,3 +5,11 @@
     padding: 10px;
     border-bottom: solid 1px black;
 }
+
+.header.collapsed{
+    margin-left: 0px;
+}
+
+.header.expanded{
+    margin-left: 160px;
+}

@@ -45,9 +45,9 @@ function App() {
     // TODO - pass in expanded sidebar state to components that need to know about it/update it.
     return (
         <div className="app">
-            <HeaderComponent />
-            <SidebarComponent expanded = {expanded}/>
-            <FeedComponent results={feedResults}/>
+            <HeaderComponent    expanded = {expanded}/>
+            <SidebarComponent   expanded = {expanded}/>
+            <FeedComponent      expanded = {expanded} results={feedResults}/>
         </div>
     );
 }

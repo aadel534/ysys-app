@@ -4,6 +4,14 @@
     padding: 10px;
 }
 
+.feed.collapsed{
+    margin-left: 0px;
+}
+
+.feed.expanded{
+    margin-left: 160px;
+}
+
 p {
     display: inline;
     font-size: 20px;

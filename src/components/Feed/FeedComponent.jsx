@@ -3,9 +3,16 @@ import './FeedComponent.css';
 
 // TODO - make sure FeedComponent is expecting the right props!
 export const FeedComponent = (props) => {
-    //console.log(props.results);
+
+    let feedClass = "feed";
+    if (props.expanded) {
+        feedClass += " expanded";
+    }
+    else{
+        feedClass += " collapsed";
+    }
     props.results.map(x => console.log(x.url));
-    return <div className={'feed'}>
+    return <div className={feedClass}>
         {/* TODO - add a placeholder for an empty feed */}
         {/* TODO - build up a list of results */}
         {/* TODO [STRETCH] - update this list to be a list/grid of STRETCH_Cards */}
