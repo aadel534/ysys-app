@@ -17,8 +17,8 @@ function App() {
        <Route path ="/characters" component={CharactersCard}/>
        <Route path ="/books" component={BooksCard}/>
       </Switch>
-      </div>    
-      </Router>
+    </div>
+    </Router>
 
   );
 }

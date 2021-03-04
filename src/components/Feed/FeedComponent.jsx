@@ -5,13 +5,29 @@ import './FeedComponent.css';
 export const FeedComponent = (props) => {
 
     let feedClass = "feed";
+    let card = "";
     if (props.expanded) {
         feedClass += " expanded";
     }
     else{
         feedClass += " collapsed";
     }
-    props.results.map(x => console.log(x.url));
+    /*
+    switch (props.searchMode) {
+        case "houses":
+            card = <HouseCard />
+            break;
+        case "characters":
+            card = <CharacterCard />
+            break;
+        case "books":
+            card = <BookCard />
+            break;
+        default:
+            break;
+    }
+    */
+
     return <div className={feedClass}>
         {/* TODO - add a placeholder for an empty feed */}
         {/* TODO - build up a list of results */}

@@ -22,7 +22,11 @@ function CharactersCard() {
 <div>       
 
 {characters.map(character => (
+<<<<<<< Updated upstream
         <h1>{character.aliases}</h1>
+=======
+        <h1>{character.alias}</h1>
+>>>>>>> Stashed changes
       ))}
       ;
       </div>

@@ -9,12 +9,12 @@ function App() {
 
     const [expanded, setExpanded] = useState(true);
     const [feedResults, setFeedResults] = useState([]);
+    const [searchMode, setSearchMode] = useState("houses")
 
     useEffect( () => {
-        getData("houses")
+        getData(searchMode)
         .then(data => setFeedResults(data));
     } ,[]);
-    
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
     //  This should include things like:
