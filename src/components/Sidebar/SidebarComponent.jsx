@@ -1,8 +1,13 @@
 import React from 'react'
 import './SidebarComponent.css';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 // TODO - make sure SidebarComponent is expecting the right props!
 export const SidebarComponent = (props) => {
+
+    const searchUpdate = (e) => {
+        props.setSearchMode(e.target.value);
+    };
     
     let sidebarClass = "sidebar";
     if (props.expanded) {
@@ -22,7 +27,20 @@ export const SidebarComponent = (props) => {
              You could even change what you can see in the search bar based on what you are searching for.
              E.g add a dropdown to determine which field you're searching on ("name"/"title"/"alias")
         */}
-            <a href="#">About</a>
-            <a href="#">About 2</a>
+        {/*
+            <Router>
+                <div>
+                    <Link to = "/characters" replace>Characters</Link>
+                    <Link to = "/houses" replace>Houses</Link>
+                    <Link to = "/books" replace>Books</Link>
+                </div>
+            </Router>
+        */}
+        <div onChange = {searchUpdate}>
+            <input type="radio" value="books" name="searchmode" defaultChecked /> Books
+            <input type="radio" value="characters" name="searchmode" /> Characters
+            <input type="radio" value="houses" name="searchmode" /> Houses
+        </div>
+
     </div>
 };

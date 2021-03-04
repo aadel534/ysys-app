@@ -16,8 +16,6 @@ function HouseCard() {
       };
 
 
-
-
     return (
       <div >
        {house.map(house=> (
