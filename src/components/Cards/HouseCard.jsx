@@ -8,7 +8,8 @@ export const HouseCard = (house) => {
     return <div>
         <p className="title">{house.name}</p>
         <p className="region">{house.region}</p>
+        <p className="founded">{house.founded}</p>
     </div>
 };
 
-export default HouseCard
+export default HouseCard;

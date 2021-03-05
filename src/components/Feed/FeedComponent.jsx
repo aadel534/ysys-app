@@ -21,7 +21,7 @@ export const FeedComponent = (props) => {
         console.log(props.searchMode);
         switch (props.searchMode) {
             case "houses":
-                return <HouseCard name = {x.name} region = {x.region}/>
+                return <HouseCard name = {x.name} region = {x.region} founded = {x.founded}/>
                 break;
             case "characters":
                 return <CharacterCard aliases={x.aliases} gender = {x.gender}/>

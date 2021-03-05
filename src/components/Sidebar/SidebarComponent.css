@@ -29,7 +29,9 @@
 
 /* TODO expanded styles */
 .sidebar.expanded {
+width: min-content;
     /* width: ??? */
+    
 }
 
 /* TODO collapsed styles */
