@@ -1,11 +1,9 @@
 import React from 'react';
 import './Card.css';
+import replaceEmptyStringWithUnknown from './../../utils/replaceEmptyStringWithUnknown';
 
-// TODO - create a component which displays information about Houses
-
-// TODO - make sure HouseCard is expecting the right props!
 export const HouseCard = (house) => {
-    return <div>
+    return <div className="card">
         <p className="title">{house.name}</p>
         <p className="region">{house.region}</p>
         <p className="founded">{house.founded}</p>

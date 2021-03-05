@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import HouseCard from '../Cards/HouseCard';
 import './HeaderComponent.css';
 
-// TODO - make sure HeaderComponent is expecting the right props (if any)!
 export const HeaderComponent = (props) => {
 
     let headerClass = "header";
@@ -13,12 +12,12 @@ export const HeaderComponent = (props) => {
         headerClass += " collapsed";
     }
 
+    // updates class based on sidebar expansion state
     const updateExpansion = (e) => {
         props.setExpanded(props.expanded ? false : true);
     };
 
    /* adding search bar functionallity.*/ 
-
     const [search, setSearch] = useState('');
     const updateSearch = e => { setSearch(e.target.value)};
 
