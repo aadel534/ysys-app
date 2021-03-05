@@ -18,7 +18,6 @@ export const FeedComponent = (props) => {
     }
 
     const renderCard = (x) => {
-        console.log(props.searchMode);
         switch (props.searchMode) {
             case "houses":
                 return <HouseCard name = {x.name} region = {x.region} founded = {x.founded}/>

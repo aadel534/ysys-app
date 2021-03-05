@@ -9,12 +9,13 @@ function App() {
 
     const [expanded, setExpanded] = useState(true);
     const [feedResults, setFeedResults] = useState([]);
-    const [searchMode, setSearchMode] = useState()
+    const [searchMode, setSearchMode] = useState("books");
+    const [search, setSearch] = useState("");
 
     useEffect( () => {
-        getData(searchMode)
+        getData(searchMode, search) 
         .then(data => setFeedResults(data));
-    } ,[searchMode]);
+    } ,[searchMode, search]);
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
     //  This should include things like:
@@ -45,7 +46,7 @@ function App() {
     // TODO - pass in expanded sidebar state to components that need to know about it/update it.
     return (
         <div className="app">
-            <HeaderComponent    expanded = {expanded} setExpanded = {setExpanded} expanded = {expanded}/>
+            <HeaderComponent    search = {search} setSearch = {setSearch} expanded = {expanded} setExpanded = {setExpanded} expanded = {expanded}/>
             <SidebarComponent   expanded = {expanded} searchMode = {searchMode} setSearchMode = {setSearchMode}/>
             <FeedComponent      expanded = {expanded} searchMode = {searchMode} results={feedResults}/>
         </div>

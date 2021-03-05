@@ -17,25 +17,14 @@ export const HeaderComponent = (props) => {
         props.setExpanded(props.expanded ? false : true);
     };
 
-    const [counter, setCounter] = useState(0);
-
    /* adding search bar functionallity.*/ 
 
-    useEffect(() =>  {
-    console.log("Effect has been run");
-    }, []);
-
-
     const [search, setSearch] = useState('');
-    const [query, setQuery] = useState('')
-    const updateSearch = e => { setSearch(e.target.value);
-        console.log(search);  
-    };
+    const updateSearch = e => { setSearch(e.target.value)};
 
     const getSearch = e => {
       e.preventDefault();
-      setQuery(search);
-
+      props.setSearch(search);
     }
 
     return <header className={headerClass}>
@@ -46,7 +35,6 @@ export const HeaderComponent = (props) => {
         <button onClick = {updateExpansion} >SIDEBAR</button>
 
         <form onSubmit={getSearch} className="search-bar"> 
-        {search}
            <input 
              className="search-form" 
              placeholder={"Type in here..."}
