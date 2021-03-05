@@ -6,6 +6,11 @@
 //  - characters
 //  - houses
 
+/* Code might be useful gor from APIUPDATE
+const [house, setHouse] = useState([]);
+*/
+
+
 // TODO [STRETCH]
 //  customise function (or create another function) to retrieve extra data based on configuration (number of results/pages/search
 
@@ -16,3 +21,5 @@ export const getData = async (searchMode) => {
     const data = await response.json();
     return data;
 };
+
+

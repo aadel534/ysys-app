@@ -43,6 +43,8 @@ export const FeedComponent = (props) => {
         {props.results.map( (x,i) => 
             <div key = {i}>{/* */}
                 {renderCard(x)}
+
+                
             </div>
         )}
         

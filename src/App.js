@@ -9,7 +9,7 @@ function App() {
 
     const [expanded, setExpanded] = useState(true);
     const [feedResults, setFeedResults] = useState([]);
-    const [searchMode, setSearchMode] = useState("books")
+    const [searchMode, setSearchMode] = useState()
 
     useEffect( () => {
         getData(searchMode)
