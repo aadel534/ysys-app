@@ -30,16 +30,19 @@ export const HeaderComponent = (props) => {
         {/* TODO [STRETCH] - add in any controls that you'd like in your header
              E.g, a search bar, a toggle button for the side bar, or just a plain header!
         */}
-        I'm the header component
-        <button onClick = {updateExpansion} >SIDEBAR</button>
+        <button className="filter-button" onClick = {updateExpansion} >FILTERS</button>
+
+        <h1>An API of Ice and Fire</h1>
 
         <form onSubmit={getSearch} className="search-bar"> 
-           <input 
-             className="search-form" 
-             placeholder={"Type in here..."}
-             type="text" value={search} 
-             onChange={updateSearch}/> 
-           <button className="search-button" type="submit"> SEARCH </button>
+            <input 
+              className="search-form" 
+              placeholder={"Search..."}
+              type="text" value={search} 
+              onChange={updateSearch}/> 
+            <button className="search-button" type="submit">
+              <i className="material-icons">search</i>
+            </button>
          </form>
         
     </header>

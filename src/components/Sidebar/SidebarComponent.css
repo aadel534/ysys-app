@@ -1,38 +1,77 @@
 /* TODO general sidebar styles */
 /* The sidebar menu */
 .sidebar {
-    height: 100%; /* 100% Full-height */
-    width: 160px; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: white; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 10px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-    border-right: 1px solid black;
-}
-
-.sidebar a {
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #000000;
+  height: 100%; /* 100% Full-height */
+  width: 120px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #930416; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  border-right: 1px solid black;
+  padding: 10px; /* Place content 60px from the top */
 }
 
 /* TODO expanded styles */
 .sidebar.expanded {
-    width: 160px;
+  width: 160px; /* equal to left-margin of header */
 }
 
 /* TODO collapsed styles */
 .sidebar.collapsed {
-    display: none;
+  display: none;
+}
+
+.radio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.radio-box input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-box label {
+  width: 100px;
+  text-align: center;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: #64000d;
+  color: #ffecec;
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.radio-box label:hover {
+  background-color: #a32927;
+}
+
+/* .radio-box input[type="radio"]:focus + label {
+  border: 2px dashed #444;
+} */
+
+.radio-box input[type="radio"]:checked + label {
+  background-color: #eab64d;
+  color: #370003;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #000000;
 }

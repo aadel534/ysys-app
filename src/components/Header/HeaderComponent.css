@@ -1,15 +1,66 @@
 /* TODO add some general header styles */
 
 .header {
-    margin-left: 160px;
-    padding: 10px;
-    border-bottom: solid 1px black;
+  padding: 10px;
+  background-color: #eab64d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
 }
 
-.header.collapsed{
-    margin-left: 0px;
+.header.collapsed {
+  margin-left: 0px;
 }
 
-.header.expanded{
-    margin-left: 160px;
+.header.expanded {
+  margin-left: 180px; /* set equal to width of sidebar plus its padding */
+}
+
+h1 {
+  font-family: Charm;
+  color: #370003;
+}
+
+.filter-button {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #930416;
+  color: #ffecec;
+  border: none;
+}
+
+.filter-button:hover {
+  background-color: #64000d;
+}
+
+.filter-button:focus {
+  outline: none;
+}
+
+form {
+  margin-right: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ffecec;
+  color: #370003;
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.search-button {
+  margin-left: -50px;
+  margin-top: 0px;
+  background-color: none;
+}
+
+.material-icons {
+  background-color: none;
 }

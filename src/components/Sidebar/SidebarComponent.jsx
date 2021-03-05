@@ -24,10 +24,22 @@ export const SidebarComponent = (props) => {
              You could even change what you can see in the search bar based on what you are searching for.
              E.g add a dropdown to determine which field you're searching on ("name"/"title"/"alias")
         */}
-        <div onChange = {searchUpdate}>
-            <input type="radio" value="books" name="searchmode" defaultChecked /> Books
-            <input type="radio" value="characters" name="searchmode" /> Characters
-            <input type="radio" value="houses" name="searchmode" /> Houses
+        <div className="radio-box" onChange = {searchUpdate}>
+
+            <div className="radio-section">
+                <input type="radio" id="books" value="books" name="searchmode" defaultChecked />
+                <label for="books">Books</label>
+            </div>
+
+            <div className="radio-section">
+                <input type="radio" id="characters" value="characters" name="searchmode" />
+                <label for="characters">Characters</label>
+            </div>
+
+            <div className="radio-section">
+                <input type="radio" id="houses" value="houses" name="searchmode" />
+                <label for="houses">Houses</label>
+            </div>
         </div>
 
     </div>
