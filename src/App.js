@@ -11,12 +11,11 @@ function App() {
     const [feedResults, setFeedResults] = useState([]);
     const [searchMode, setSearchMode] = useState("books");
     const [searchQuery, setSearchQuery] = useState("");
-    const [searchNumber, setSearchNumber] = useState("10");
-
+    const [searchNumber, setSearchNumber]= useState(10);
     useEffect( () => {
-        getData(searchMode, searchQuery, searchNumber) 
+        getData(searchNumber, searchMode, searchQuery) 
         .then(data => setFeedResults(data));
-    } ,[searchMode, searchQuery, searchNumber]);
+    } ,[searchNumber, searchMode, searchQuery]);
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
     //  This should include things like:
