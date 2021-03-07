@@ -2,6 +2,7 @@
 .feed {
     margin-left: 160px;
     padding: 10px;
+    display:flexbox;
 }
 
 .feed.collapsed{
@@ -12,25 +13,3 @@
     margin-left: 160px;
 }
 
-p {
-    display: inline;
-    font-size: 20px;
-}
-
-p.house {
-    width: 30%;
-}
-
-p.region {
-    display: inline;
-    font-size: 16px;
-    color:grey;
-    width: 20%;
-}
-
-p.founded {
-    display: inline;
-    font-size: 16px;
-    color:grey;
-    width: 20%;
-}

@@ -11,7 +11,7 @@ function App() {
     const [feedResults, setFeedResults] = useState([]);
     const [searchMode, setSearchMode] = useState("books");
     const [searchQuery, setSearchQuery] = useState("");
-    const [searchNumber, setSearchNumber] = useState("10");
+    const [searchNumber, setSearchNumber] = useState("12");
     const [searchParams, setSearchParams] = useState("name");
     const [pageNumber, setPageNumber] = useState(1);
 
