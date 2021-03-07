@@ -11,9 +11,11 @@ function App() {
     const [feedResults, setFeedResults] = useState([]);
     const [searchMode, setSearchMode] = useState("books");
     const [searchQuery, setSearchQuery] = useState("");
-    const [searchNumber, setSearchNumber]= useState(10);
+    const [searchNumber, setSearchNumber] = useState("10");
+    const [searchParams, setSearchParams] = useState("name");
+
     useEffect( () => {
-        getData(searchNumber, searchMode, searchQuery) 
+        getData(searchNumber, searchMode, searchQuery, searchParams) 
         .then(data => setFeedResults(data));
     } ,[searchNumber, searchMode, searchQuery]);
 
@@ -39,7 +41,9 @@ function App() {
                 searchMode = {searchMode} 
                 expanded = {expanded} 
                 setExpanded = {setExpanded} 
-                expanded = {expanded}/>
+                expanded = {expanded}
+                searchParams = {searchParams}
+                setSearchParams = {setSearchParams}/>
             <SidebarComponent   
                 expanded = {expanded} 
                 searchMode = {searchMode} 

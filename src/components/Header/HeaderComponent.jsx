@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import HouseCard from '../Cards/HouseCard';
 import './HeaderComponent.css';
+import SearchParameters from './SearchParameters';
 
 export const HeaderComponent = (props) => {
 
@@ -17,7 +17,7 @@ export const HeaderComponent = (props) => {
         props.setExpanded(props.expanded ? false : true);
     };
 
-   /* adding search bar functionallity.*/ 
+   // adding search bar functionality 
     const [search, setSearch] = useState('');
     const updateSearch = e => { setSearch(e.target.value)};
 
@@ -33,6 +33,8 @@ export const HeaderComponent = (props) => {
         <button className="filter-button" onClick = {updateExpansion} >FILTERS</button>
 
         <h1>An API of Ice and Fire</h1>
+
+        <SearchParameters searchMode= {props.searchMode} setSearchParams = {props.setSearchParams}/>
 
         <form onSubmit={getSearch} className="search-bar"> 
             <input 

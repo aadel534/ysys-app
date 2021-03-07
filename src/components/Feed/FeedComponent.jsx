@@ -20,7 +20,10 @@ export const FeedComponent = (props) => {
                 return <HouseCard name = {x.name} region = {x.region} founded = {x.founded}/>
                 break;
             case "characters":
-                return <CharacterCard aliases={x.aliases} gender = {x.gender}/>
+                if(x.name.length === 0){        // if name is unknown, use first alias
+                    x.name = x.aliases[0];
+                }
+                return <CharacterCard aliases={x.aliases} gender = {x.gender} name={x.name}/>
                 break;
             case "books":
                 return <BookCard x={x} name={x.name} author={x.authors} releaseDate = {x.released}/>
