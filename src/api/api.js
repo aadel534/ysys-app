@@ -9,5 +9,12 @@ export const getData = async (searchNumber, searchMode, searchQuery, searchParam
     const apiCall = `https://anapioficeandfire.com/api/${searchMode}?${searchParams}=${searchQuery}&page=1&pageSize=${searchNumber}`;
     const response = await fetch(apiCall);
     const data = await response.json();
-    return data;
+
+    if (typeof data === 'string') {     //API returns string on failed api call
+        console.log("error catch");
+        return [];
+    }
+    else{
+        return data;
+    }
 };

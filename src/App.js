@@ -16,7 +16,8 @@ function App() {
 
     useEffect( () => {
         getData(searchNumber, searchMode, searchQuery, searchParams) 
-        .then(data => setFeedResults(data));
+        .then(data => setFeedResults(data))
+        .catch(error => console.log(error));
     } ,[searchNumber, searchMode, searchQuery]);
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
