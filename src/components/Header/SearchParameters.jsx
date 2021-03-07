@@ -13,7 +13,7 @@ const SearchParameters = (props) => {
                 <div className="search-params" onChange={handleChange}>
                     <label>search type</label>
                     <select>
-                        <option value="name">Name</option>
+                        <option value="name" defaultValue>Name</option>
                         <option value="fromReleaseDate">Released after</option>
                         <option value="toReleaseDate">Released before</option>
                     </select>
@@ -25,7 +25,7 @@ const SearchParameters = (props) => {
                 <div className="search-params" onChange={handleChange}>
                     <label>search type</label>
                     <select>
-                        <option value="name">Name</option>
+                        <option value="name" defaultValue>Name</option>
                         <option value="gender">Gender</option>
                         <option value="culture">Culture</option>
                     </select>
@@ -37,7 +37,7 @@ const SearchParameters = (props) => {
                 <div className="search-params" onChange={handleChange}>
                     <label>search type</label>
                     <select>
-                        <option value="name">Name</option>
+                        <option value="name" defaultValue>Name</option>
                         <option value="region">Region</option>
                         <option value="words">Words</option>
                     </select>

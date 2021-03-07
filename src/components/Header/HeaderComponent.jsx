@@ -4,6 +4,19 @@ import SearchParameters from './SearchParameters';
 
 export const HeaderComponent = (props) => {
 
+    // and object containing search bar placeholders for each type of search
+    const searchPlaceholders = {
+      "booksname": "eg. A Game of Thrones",
+      "bookstoReleaseDate": "eg. 2005-01-01",
+      "booksfromReleaseDate":"eg. 2005-01-01",
+      "charactersname": "eg. Jon Snow",
+      "charactersgender":"eg. female",
+      "charactersculture":"eg. Braavosi",
+      "housesname": "eg. House Moss",
+      "housesregion": "eg. The North",
+      "houseswords": "eg. Winter is Coming"
+    };
+
     let headerClass = "header";
     if (props.expanded) {
         headerClass += " expanded";
@@ -39,7 +52,7 @@ export const HeaderComponent = (props) => {
         <form onSubmit={getSearch} className="search-bar"> 
             <input 
               className="search-form" 
-              placeholder={"Search..."}
+              placeholder={searchPlaceholders[props.searchMode + props.searchParams]}
               type="text" value={search} 
               onChange={updateSearch}/> 
             <button className="search-button" type="submit">
