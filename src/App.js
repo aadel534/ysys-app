@@ -11,11 +11,11 @@ function App() {
     const [feedResults, setFeedResults] = useState([]);
     const [searchMode, setSearchMode] = useState("books");
     const [search, setSearch] = useState("");
-
+    const [howMany, setHowMany]= useState(10);
     useEffect( () => {
-        getData(searchMode, search) 
+        getData(howMany,searchMode, search) 
         .then(data => setFeedResults(data));
-    } ,[searchMode, search]);
+    } ,[howMany,searchMode, search]);
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
     //  This should include things like:
@@ -34,7 +34,7 @@ function App() {
     return (
         <div className="app">
             <HeaderComponent    search = {search} setSearch = {setSearch} expanded = {expanded} setExpanded = {setExpanded} expanded = {expanded}/>
-            <SidebarComponent   expanded = {expanded} searchMode = {searchMode} setSearchMode = {setSearchMode}/>
+            <SidebarComponent  howMany={howMany} setHowMany={setHowMany} expanded = {expanded} searchMode = {searchMode} setSearchMode = {setSearchMode}/>
             <FeedComponent      expanded = {expanded} searchMode = {searchMode} results={feedResults}/>
         </div>
     );

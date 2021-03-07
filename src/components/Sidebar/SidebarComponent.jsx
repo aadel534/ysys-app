@@ -6,6 +6,10 @@ export const SidebarComponent = (props) => {
     const searchUpdate = (e) => {
         props.setSearchMode(e.target.value);
     };
+    const howManyValues=(e)=>{
+                props.setHowMany(e.target.value);
+
+    }
     
     let sidebarClass = "sidebar";
     if (props.expanded) {
@@ -41,6 +45,8 @@ export const SidebarComponent = (props) => {
                 <label for="houses">Houses</label>
             </div>
         </div>
+      How many?  <div onChange={howManyValues}>   <input type="number"min ="10" max="100"/>
+</div>
 
     </div>
 };
