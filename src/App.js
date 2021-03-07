@@ -13,12 +13,12 @@ function App() {
     const [searchQuery, setSearchQuery] = useState("");
     const [searchNumber, setSearchNumber] = useState("10");
     const [searchParams, setSearchParams] = useState("name");
+    const [pageNumber, setPageNumber] = useState(1);
 
     useEffect( () => {
-        getData(searchNumber, searchMode, searchQuery, searchParams) 
+        getData(searchNumber, searchMode, searchQuery, searchParams, pageNumber) 
         .then(data => setFeedResults(data))
-        .catch(error => console.log(error));
-    } ,[searchNumber, searchMode, searchQuery]);
+    } ,[searchNumber, searchMode, searchQuery, pageNumber]);
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
     //  This should include things like:
@@ -46,10 +46,12 @@ function App() {
                 searchParams = {searchParams}
                 setSearchParams = {setSearchParams}/>
             <SidebarComponent   
-                expanded = {expanded} 
+                expanded = {expanded}
                 searchMode = {searchMode} 
                 setSearchMode = {setSearchMode}
-                setSearchNumber = {setSearchNumber}/>
+                setSearchNumber = {setSearchNumber}
+                pageNumber = {pageNumber}
+                setPageNumber = {setPageNumber}/>
             <FeedComponent      
                 expanded = {expanded} 
                 searchMode = {searchMode} 

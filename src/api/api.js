@@ -5,8 +5,8 @@ import { getAllByPlaceholderText } from "@testing-library/dom";
 //  customise function (or create another function) to retrieve extra data based on configuration (number of results/pages/search
 // see cheat sheet for fetch example.
 
-export const getData = async (searchNumber, searchMode, searchQuery, searchParams) => {
-    const apiCall = `https://anapioficeandfire.com/api/${searchMode}?${searchParams}=${searchQuery}&page=1&pageSize=${searchNumber}`;
+export const getData = async (searchNumber, searchMode, searchQuery, searchParams, pageNumber) => {
+    const apiCall = `https://anapioficeandfire.com/api/${searchMode}?${searchParams}=${searchQuery}&page=${pageNumber}&pageSize=${searchNumber}`;
     const response = await fetch(apiCall);
     const data = await response.json();
 

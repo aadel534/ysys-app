@@ -10,6 +10,20 @@ export const SidebarComponent = (props) => {
     const numberUpdate = (e) => {
         props.setSearchNumber(e.target.value);
     };
+
+    const handlePagination = (e) => {
+        if (e.target.id == "next-page") {
+            console.log(`from ${props.pageNumber} to ${props.pageNumber + 1}`);
+            props.setPageNumber(props.pageNumber+1);
+        }
+        else if (e.target.id == "previous-page" && props.pageNumber != 1) {
+            console.log(`from ${props.pageNumber} to ${props.pageNumber - 1}`);
+            props.setPageNumber(props.pageNumber-1);
+        }
+        else {
+            console.log("invalid pagination request");
+        }
+    }
     
     let sidebarClass = "sidebar";
     if (props.expanded) {
@@ -44,13 +58,18 @@ export const SidebarComponent = (props) => {
             </div>
         </div>
         <div className="result-number" onChange = {numberUpdate}>
-            <label>Number of results
+            <label>Results per page
             <input list="browsers" name="myBrowser" placeholder="10"/></label>
             <datalist id="browsers">
                 <option value="10"/>
                 <option value="20"/>
                 <option value="50"/>
             </datalist>
+        </div>
+        <div className="pagination">
+            <p>Page: {props.pageNumber}</p>
+            <a href="#" className="page previous round" id="previous-page" onClick={handlePagination}>&#8249;</a>
+            <a href="#" className="page next round" id="next-page"onClick={handlePagination}>&#8250;</a>
         </div>
     </div>
 };

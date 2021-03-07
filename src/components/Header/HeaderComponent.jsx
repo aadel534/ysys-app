@@ -32,11 +32,12 @@ export const HeaderComponent = (props) => {
 
    // adding search bar functionality 
     const [search, setSearch] = useState('');
-    const updateSearch = e => { setSearch(e.target.value)};
+    const handleChange = e => { setSearch(e.target.value)};
 
-    const getSearch = e => {
+    const handleSubmit = e => {
       e.preventDefault();
-      props.setSearch(search);
+      props.setSearch(search);    //updates the search hook, causing a rerender
+      setSearch("");
     }
 
     return <header className={headerClass}>
@@ -49,15 +50,17 @@ export const HeaderComponent = (props) => {
 
         <SearchParameters searchMode= {props.searchMode} setSearchParams = {props.setSearchParams}/>
 
-        <form onSubmit={getSearch} className="search-bar"> 
+        <form onSubmit={handleSubmit} className="search-bar"> 
             <input 
               className="search-form" 
               placeholder={searchPlaceholders[props.searchMode + props.searchParams]}
               type="text" value={search} 
-              onChange={updateSearch}/> 
+              onChange={handleChange}/> 
+            {/* 
             <button className="search-button" type="submit">
               <i className="material-icons">search</i>
             </button>
+            */}
          </form>
         
     </header>
