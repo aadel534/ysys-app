@@ -6,6 +6,10 @@ export const SidebarComponent = (props) => {
     const searchUpdate = (e) => {
         props.setSearchMode(e.target.value);
     };
+
+    const numberUpdate = (e) => {
+        props.setSearchNumber(e.target.value);
+    };
     
     let sidebarClass = "sidebar";
     if (props.expanded) {
@@ -28,19 +32,25 @@ export const SidebarComponent = (props) => {
 
             <div className="radio-section">
                 <input type="radio" id="books" value="books" name="searchmode" defaultChecked />
-                <label for="books">Books</label>
+                <label htmlFor="books">Books</label>
             </div>
-
             <div className="radio-section">
                 <input type="radio" id="characters" value="characters" name="searchmode" />
-                <label for="characters">Characters</label>
+                <label htmlFor="characters">Characters</label>
             </div>
-
             <div className="radio-section">
                 <input type="radio" id="houses" value="houses" name="searchmode" />
-                <label for="houses">Houses</label>
+                <label htmlFor="houses">Houses</label>
             </div>
         </div>
-
+        <div className="result-number" onChange = {numberUpdate}>
+            <label>Number of results
+            <input list="browsers" name="myBrowser" placeholder="10"/></label>
+            <datalist id="browsers">
+                <option value="10"/>
+                <option value="20"/>
+                <option value="50"/>
+            </datalist>
+        </div>
     </div>
 };

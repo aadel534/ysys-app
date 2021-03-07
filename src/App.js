@@ -10,12 +10,13 @@ function App() {
     const [expanded, setExpanded] = useState(true);
     const [feedResults, setFeedResults] = useState([]);
     const [searchMode, setSearchMode] = useState("books");
-    const [search, setSearch] = useState("");
+    const [searchQuery, setSearchQuery] = useState("");
+    const [searchNumber, setSearchNumber] = useState("10");
 
     useEffect( () => {
-        getData(searchMode, search) 
+        getData(searchMode, searchQuery, searchNumber) 
         .then(data => setFeedResults(data));
-    } ,[searchMode, search]);
+    } ,[searchMode, searchQuery, searchNumber]);
 
     // TODO - this is the "main" component for our app, and it will include all the global state that we care about
     //  This should include things like:
@@ -33,9 +34,22 @@ function App() {
     // TODO - pass in expanded sidebar state to components that need to know about it/update it.
     return (
         <div className="app">
-            <HeaderComponent    search = {search} setSearch = {setSearch} expanded = {expanded} setExpanded = {setExpanded} expanded = {expanded}/>
-            <SidebarComponent   expanded = {expanded} searchMode = {searchMode} setSearchMode = {setSearchMode}/>
-            <FeedComponent      expanded = {expanded} searchMode = {searchMode} results={feedResults}/>
+            <HeaderComponent    
+                search = {searchQuery} 
+                setSearch = {setSearchQuery}
+                searchMode = {searchMode} 
+                expanded = {expanded} 
+                setExpanded = {setExpanded} 
+                expanded = {expanded}/>
+            <SidebarComponent   
+                expanded = {expanded} 
+                searchMode = {searchMode} 
+                setSearchMode = {setSearchMode}
+                setSearchNumber = {setSearchNumber}/>
+            <FeedComponent      
+                expanded = {expanded} 
+                searchMode = {searchMode} 
+                results = {feedResults}/>
         </div>
     );
 }
