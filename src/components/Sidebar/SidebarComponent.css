@@ -83,7 +83,7 @@
 }
 
 .pagination p {
-  font-size: 14px;
+  font-size: 20px;
   color: #ffecec;
   margin: 0;
 }
@@ -93,7 +93,8 @@ a.page {
   text-decoration: none;
   text-align: center;
   padding: 0px;
-  width: 18px;
+  width: 26px;
+  height: 26px; 
   border-radius: 50%;
   color: #ffecec;
   background-color: #64000d;
