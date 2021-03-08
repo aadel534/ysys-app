@@ -120,7 +120,7 @@ a.page:hover {
   margin-top: 0;
 }
 
-.result-number input {
+.result-number select {
   width: 100%;
   font-size: 12px;
   padding: 5px;

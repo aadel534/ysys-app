@@ -60,12 +60,12 @@ export const SidebarComponent = (props) => {
         </div>
 
         <div className="result-number" onChange = {numberUpdate}>
-            <label>Results per page</label>
-                <select>
-                    <option>10</option>
-                    <option>20</option>
-                    <option>50</option>
-                </select>
+            <label><p>Results per page</p></label>
+            <select>
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+            </select>
             
         </div>
 
