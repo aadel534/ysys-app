@@ -41,9 +41,6 @@ export const HeaderComponent = (props) => {
     }
 
     return <header className={headerClass}>
-        {/* TODO [STRETCH] - add in any controls that you'd like in your header
-             E.g, a search bar, a toggle button for the side bar, or just a plain header!
-        */}
         <button className="filter-button" onClick = {updateExpansion} >FILTERS</button>
 
         <h1>An API of Ice and Fire</h1>
@@ -57,11 +54,6 @@ export const HeaderComponent = (props) => {
                 placeholder={searchPlaceholders[props.searchMode + props.searchParams]}
                 type="text" value={search} 
                 onChange={handleChange}/> 
-              {/* 
-              <button className="search-button" type="submit">
-                <i className="material-icons">search</i>
-              </button>
-              */}
           </form>
         </div>
         

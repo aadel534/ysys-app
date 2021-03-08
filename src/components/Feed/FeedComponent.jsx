@@ -45,9 +45,6 @@ export const FeedComponent = (props) => {
     }
     else {
         return <div className={feedClass}>
-            {/* TODO - add a placeholder for an empty feed */}
-            {/* TODO - build up a list of results */}
-            {/* TODO [STRETCH] - update this list to be a list/grid of STRETCH_Cards */}
             {props.results.map( (element,index) => 
                 <div key = {index} className="card">
                     {renderCard(element)}
