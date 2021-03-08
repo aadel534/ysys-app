@@ -1,36 +1,36 @@
 /* TODO add feed styles */
 .feed {
-    margin-left: 160px;
-    padding: 10px;
+  margin-left: 160px;
+  padding: 10px;
 }
 
-.feed.collapsed{
-    margin-left: 0px;
+.feed.collapsed {
+  margin-left: 0px;
 }
 
-.feed.expanded{
-    margin-left: 160px;
+.feed.expanded {
+  margin-left: 160px; /* set equal to left margin on header */
 }
 
 p {
-    display: inline;
-    font-size: 20px;
+  display: inline;
+  font-size: 20px;
 }
 
 p.house {
-    width: 30%;
+  width: 30%;
 }
 
 p.region {
-    display: inline;
-    font-size: 16px;
-    color:grey;
-    width: 20%;
+  display: inline;
+  font-size: 16px;
+  color: grey;
+  width: 20%;
 }
 
 p.founded {
-    display: inline;
-    font-size: 16px;
-    color:grey;
-    width: 20%;
+  display: inline;
+  font-size: 16px;
+  color: grey;
+  width: 20%;
 }

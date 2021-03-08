@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 80px;
 }
 
 .header.collapsed {
@@ -14,7 +14,7 @@
 }
 
 .header.expanded {
-  margin-left: 180px; /* set equal to width of sidebar plus its padding */
+  margin-left: 160px; /* set equal to width of sidebar */
 }
 
 h1 {
@@ -29,6 +29,8 @@ h1 {
   background-color: #930416;
   color: #ffecec;
   border: none;
+  font-family: "Song Myung", serif;
+  font-size: 14px;
 }
 
 .filter-button:hover {
@@ -44,11 +46,13 @@ form {
 }
 
 input[type="text"] {
+  width: 150px;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 4px;
   background-color: #ffecec;
   color: #370003;
   border: none;
+  font-size: 14px;
 }
 
 input[type="text"]:focus {
@@ -63,4 +67,24 @@ input[type="text"]:focus {
 
 .material-icons {
   background-color: none;
+}
+
+.search-params {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.search-params select {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: #ffecec;
+  color: #370003;
+  margin: 0 5px;
+}
+
+.search-fields {
+  display: flex;
 }
