@@ -1,3 +1,61 @@
 /* TODO write some card styles */
 .card {
+    float:left;
+    width: 25%;
+    min-width: 350px;
+    height: 200px;
+    margin-left: 50px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: rgb(255, 250, 250);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+p {
+    font-size: 20px;
+}
+
+p.title {
+    font-size: 24px;
+    text-align: center;
+    font-style: normal;
+}
+
+p.house {
+    width: 90%;
+}
+
+p.subtitle {
+    font-size: 16px;
+    color:grey;
+    width: 100%;
+}
+
+p.founded {
+    font-size: 16px;
+    color:grey;
+    width: 100%;
+}
+
+.hasWords{
+    font-size: 22px;
+    color:black;
+    width: 100%;
+}
+
+.noWords{
+    font-size: 16px;
+    padding-top: 10px;
+    font-style: italic;
+    color:grey;
+    width: 100%;
 }

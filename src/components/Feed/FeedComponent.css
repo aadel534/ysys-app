@@ -2,6 +2,7 @@
 .feed {
   margin-left: 160px;
   padding: 10px;
+  display: flexbox;
 }
 
 .feed.collapsed {

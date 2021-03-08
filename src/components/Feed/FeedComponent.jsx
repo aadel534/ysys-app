@@ -17,20 +17,25 @@ export const FeedComponent = (props) => {
     const renderCard = (x) => {
         switch (props.searchMode) {
             case "houses":
-                return <HouseCard name = {x.name} region = {x.region} founded = {x.founded}/>
-                break;
+                return <HouseCard name = {x.name} 
+                                    region = {x.region} 
+                                    founded = {x.founded}
+                                    words = {x.words ? x.words : "No Known Words"}
+                                    hasWords = {x.words ? "hasWords" : "noWords"}/>
             case "characters":
                 if(x.name.length === 0){        // if name is unknown, use first alias
                     x.name = x.aliases[0];
                 }
-                return <CharacterCard aliases={x.aliases} gender = {x.gender} name={x.name}/>
-                break;
+                return <CharacterCard aliases={x.aliases} 
+                                        gender = {x.gender} 
+                                        name={x.name}
+                                        culture = {x.culture}/>
             case "books":
-                return <BookCard x={x} name={x.name} author={x.authors} releaseDate = {x.released}/>
-                break;
+                return <BookCard name={x.name} 
+                            author={x.authors} 
+                            releaseDate = {x.released}/>
             default:
                 return <p>Loading...</p>
-                break;
         }
     };
     if (props.results.length == 0) {
@@ -44,7 +49,7 @@ export const FeedComponent = (props) => {
             {/* TODO - build up a list of results */}
             {/* TODO [STRETCH] - update this list to be a list/grid of STRETCH_Cards */}
             {props.results.map( (element,index) => 
-                <div key = {index}>
+                <div key = {index} className="card">
                     {renderCard(element)}
             </div>
             )}

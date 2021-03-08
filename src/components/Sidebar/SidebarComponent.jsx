@@ -8,6 +8,7 @@ export const SidebarComponent = (props) => {
     };
 
     const numberUpdate = (e) => {
+        console.log(e.target.value);
         props.setSearchNumber(e.target.value);
     };
 
@@ -59,13 +60,13 @@ export const SidebarComponent = (props) => {
         </div>
 
         <div className="result-number" onChange = {numberUpdate}>
-            <label><p>Results per page</p>
-            <input list="browsers" name="myBrowser" placeholder="10"/></label>
-            <datalist id="browsers">
-                <option value="10"/>
-                <option value="20"/>
-                <option value="50"/>
-            </datalist>
+            <label>Results per page</label>
+                <select>
+                    <option>10</option>
+                    <option>20</option>
+                    <option>50</option>
+                </select>
+            
         </div>
 
         <div className="pagination">
