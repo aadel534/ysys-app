@@ -5,9 +5,9 @@ import replaceEmptyStringWithUnknown from './../../utils/replaceEmptyStringWithU
 export const CharacterCard = (character) => {
     return <div>
         <div className = "container">
-            <p className = "title">{character.name}</p>
-            <p className = "subtitle">{character.gender}</p>
-            <p className = "culture">culture: {character.culture}</p>
+            <p className = "title">{replaceEmptyStringWithUnknown(character.name)}</p>
+            <p className = "subtitle">{replaceEmptyStringWithUnknown(character.gender)}</p>
+            <p className = "culture">Culture: {replaceEmptyStringWithUnknown(character.culture)}</p>
         </div>
         
     </div>
