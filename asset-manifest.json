@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/ysys-app/static/css/main.da57049e.chunk.css",
-    "main.js": "/ysys-app/static/js/main.ac3e3833.chunk.js",
-    "main.js.map": "/ysys-app/static/js/main.ac3e3833.chunk.js.map",
+    "main.css": "/ysys-app/static/css/main.5633e71f.chunk.css",
+    "main.js": "/ysys-app/static/js/main.151d4599.chunk.js",
+    "main.js.map": "/ysys-app/static/js/main.151d4599.chunk.js.map",
     "runtime-main.js": "/ysys-app/static/js/runtime-main.558e9eb1.js",
     "runtime-main.js.map": "/ysys-app/static/js/runtime-main.558e9eb1.js.map",
-    "static/js/2.ee66ff26.chunk.js": "/ysys-app/static/js/2.ee66ff26.chunk.js",
-    "static/js/2.ee66ff26.chunk.js.map": "/ysys-app/static/js/2.ee66ff26.chunk.js.map",
+    "static/js/2.c1a5d103.chunk.js": "/ysys-app/static/js/2.c1a5d103.chunk.js",
+    "static/js/2.c1a5d103.chunk.js.map": "/ysys-app/static/js/2.c1a5d103.chunk.js.map",
     "index.html": "/ysys-app/index.html",
-    "static/css/main.da57049e.chunk.css.map": "/ysys-app/static/css/main.da57049e.chunk.css.map",
-    "static/js/2.ee66ff26.chunk.js.LICENSE.txt": "/ysys-app/static/js/2.ee66ff26.chunk.js.LICENSE.txt"
+    "static/css/main.5633e71f.chunk.css.map": "/ysys-app/static/css/main.5633e71f.chunk.css.map",
+    "static/js/2.c1a5d103.chunk.js.LICENSE.txt": "/ysys-app/static/js/2.c1a5d103.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.558e9eb1.js",
-    "static/js/2.ee66ff26.chunk.js",
-    "static/css/main.da57049e.chunk.css",
-    "static/js/main.ac3e3833.chunk.js"
+    "static/js/2.c1a5d103.chunk.js",
+    "static/css/main.5633e71f.chunk.css",
+    "static/js/main.151d4599.chunk.js"
   ]
 }
