@@ -2,11 +2,19 @@ import React from 'react';
 import './Card.css';
 
 export const BookCard = (book) => {
+
+    // expecting an input of the format 1996-08-01T00:00:00
+    const formatDate = (dateString) => {
+        let string = "";
+        string += dateString.substring(0,10);
+        return string.replace(/-/g,'/');
+    }
+
     return <div>
         <div className="container">
             <p className = "title">{book.name}</p>
             <p className = "subtitle">{book.author}</p>
-            <p className = "release-date">{book.releaseDate}</p>
+            <p className = "release-date">{formatDate(book.releaseDate)}</p>
         </div>
     </div>
 };
