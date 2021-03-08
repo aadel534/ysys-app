@@ -1,7 +1,4 @@
 /* TODO general sidebar styles */
-* {
-  box-sizing: border-box;
-}
 /* The sidebar menu */
 .sidebar {
   height: 100%; /* 100% Full-height */
@@ -41,13 +38,14 @@
 }
 
 .radio-box label {
-  width: 119px;
+  width: 100px;
   text-align: center;
   margin-bottom: 10px;
-  display: block;
+  display: inline-block;
   background-color: #64000d;
   color: #ffecec;
-  padding: 10px;
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
   font-size: 16px;
   border-radius: 4px;
 }
@@ -55,6 +53,10 @@
 .radio-box label:hover {
   background-color: #a32927;
 }
+
+/* .radio-box input[type="radio"]:focus + label {
+  border: 2px dashed #444;
+} */
 
 .radio-box input[type="radio"]:checked + label {
   background-color: #eab64d;
@@ -75,58 +77,27 @@
 }
 
 /* Styles for the paging buttons */
-.pagination {
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.pagination p {
-  font-size: 14px;
-  color: #ffecec;
-  margin: 0;
-}
-
 a.page {
-  font-size: 16px;
   text-decoration: none;
-  text-align: center;
-  padding: 0px;
-  width: 18px;
-  border-radius: 50%;
-  color: #ffecec;
-  background-color: #64000d;
+  display: inline-block;
+  padding: 8px 16px;
 }
 
 a.page:hover {
-  background-color: #a32927;
+  background-color: #ddd;
+  color: black;
+}
+
+a.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+a.next {
+  background-color: #aaa;
+  color: white;
 }
 
 .round {
-}
-
-/****** STYLES FOR RESULTS PER PAGE INPUT */
-.result-number {
-  padding: 10px;
-}
-
-.result-number p {
-  font-size: 14px;
-  color: #ffecec;
-  text-align: center;
-  display: block;
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-
-.result-number input {
-  width: 100%;
-  font-size: 12px;
-  padding: 5px;
-  border-radius: 4px;
-  outline: none;
-  border: none;
-  color: #370003;
-  background-color: #ffecec;
+  border-radius: 9999px;
 }

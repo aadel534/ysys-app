@@ -57,9 +57,8 @@ export const SidebarComponent = (props) => {
                 <label htmlFor="houses">Houses</label>
             </div>
         </div>
-
         <div className="result-number" onChange = {numberUpdate}>
-            <label><p>Results per page</p>
+            <label>Results per page
             <input list="browsers" name="myBrowser" placeholder="10"/></label>
             <datalist id="browsers">
                 <option value="10"/>
@@ -67,10 +66,9 @@ export const SidebarComponent = (props) => {
                 <option value="50"/>
             </datalist>
         </div>
-
         <div className="pagination">
+            <p>Page: {props.pageNumber}</p>
             <a href="#" className="page previous round" id="previous-page" onClick={handlePagination}>&#8249;</a>
-            <p>Page {props.pageNumber}</p>
             <a href="#" className="page next round" id="next-page"onClick={handlePagination}>&#8250;</a>
         </div>
     </div>

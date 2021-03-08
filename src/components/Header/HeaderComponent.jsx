@@ -48,22 +48,20 @@ export const HeaderComponent = (props) => {
 
         <h1>An API of Ice and Fire</h1>
 
-        <div className="search-fields">
-          <SearchParameters searchMode= {props.searchMode} setSearchParams = {props.setSearchParams}/>
+        <SearchParameters searchMode= {props.searchMode} setSearchParams = {props.setSearchParams}/>
 
-          <form onSubmit={handleSubmit} className="search-bar"> 
-              <input 
-                className="search-form" 
-                placeholder={searchPlaceholders[props.searchMode + props.searchParams]}
-                type="text" value={search} 
-                onChange={handleChange}/> 
-              {/* 
-              <button className="search-button" type="submit">
-                <i className="material-icons">search</i>
-              </button>
-              */}
-          </form>
-        </div>
+        <form onSubmit={handleSubmit} className="search-bar"> 
+            <input 
+              className="search-form" 
+              placeholder={searchPlaceholders[props.searchMode + props.searchParams]}
+              type="text" value={search} 
+              onChange={handleChange}/> 
+            {/* 
+            <button className="search-button" type="submit">
+              <i className="material-icons">search</i>
+            </button>
+            */}
+         </form>
         
     </header>
 };

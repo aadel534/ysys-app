@@ -11,7 +11,7 @@ const SearchParameters = (props) => {
         case "books":
             return (
                 <div className="search-params" onChange={handleChange}>
-                    <label>search by</label>
+                    <label>search type</label>
                     <select>
                         <option value="name" defaultValue>Name</option>
                         <option value="fromReleaseDate">Released after</option>
@@ -23,7 +23,7 @@ const SearchParameters = (props) => {
         case "characters":
             return (
                 <div className="search-params" onChange={handleChange}>
-                    <label>search by</label>
+                    <label>search type</label>
                     <select>
                         <option value="name" defaultValue>Name</option>
                         <option value="gender">Gender</option>
@@ -35,7 +35,7 @@ const SearchParameters = (props) => {
         case "houses":
             return (
                 <div className="search-params" onChange={handleChange}>
-                    <label>search by</label>
+                    <label>search type</label>
                     <select>
                         <option value="name" defaultValue>Name</option>
                         <option value="region">Region</option>
