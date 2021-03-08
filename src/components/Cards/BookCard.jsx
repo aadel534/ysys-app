@@ -6,8 +6,14 @@ export const BookCard = (book) => {
     // expecting an input of the format 1996-08-01T00:00:00
     const formatDate = (dateString) => {
         let string = "";
-        string += dateString.substring(0,10);
-        return string.replace(/-/g,'/');
+        if (typeof dateString === 'undefined') {
+            string = dateString;
+        }
+        else {
+            string += dateString.substring(0,10);
+            string = string.replace(/-/g,'/');
+        }
+        return string;
     }
 
     return <div>
